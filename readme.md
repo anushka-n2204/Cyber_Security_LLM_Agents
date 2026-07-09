@@ -2,10 +2,6 @@
 
 A cybersecurity automation framework built on top of [AutoGen](https://microsoft.github.io/autogen/) that uses Large Language Models (LLMs) to drive agent workflows for red team, blue team, and detection engineering tasks.
 
-Released as part of RSAC 2024 talks:
-- [From Chatbot to Destroyer of Endpoints: Can ChatGPT Automate EDR Bypasses?](https://www.rsaconference.com/USA/agenda/session/From%20Chatbot%20to%20Destroyer%20of%20Endpoints%20Can%20ChatGPT%20Automate%20EDR%20Bypasses)
-- [The Always-On Purple Team: An Automated CI/CD for Detection Engineering](https://www.rsaconference.com/USA/agenda/session/The%20Always-On%20Purple%20Team%20An%20Automated%20CICD%20for%20Detection%20Engineering)
-
 <figure align="center">
   <img src="documentation/videos/detect_edr.gif" alt="Detecting EDR" />
   <figcaption style="text-align: center;"><i>Detecting the EDR running on a Windows system based on live data extracted from https://github.com/tsale/EDR-Telemetry.</i></figcaption>
