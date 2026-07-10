@@ -1,94 +1,100 @@
-# Cyber Security LLM Agents
+# 🛡️ Cyber Security LLM Agents
 
 A cybersecurity automation framework built on top of [AutoGen](https://microsoft.github.io/autogen/) that uses Large Language Models (LLMs) to drive agent workflows for red team, blue team, and detection engineering tasks.
 
 <figure align="center">
   <img src="documentation/videos/detect_edr.gif" alt="Detecting EDR" />
-  <figcaption style="text-align: center;"><i>Detecting the EDR running on a Windows system based on live data extracted from https://github.com/tsale/EDR-Telemetry.</i></figcaption>
+  <figcaption style="text-align: center;"><i>🔎 Detecting the EDR running on a Windows system based on live data extracted from <a href="https://github.com/tsale/EDR-Telemetry">EDR-Telemetry</a>.</i></figcaption>
 </figure>
 
-## What this project provides
+---
 
-- Modular agents and workflows for common cybersecurity tasks
-- Scenario-driven automation using LLMs
-- Built-in support for demo servers and agent coordination
-- A framework for exploring LLM-assisted threat simulation and detection engineering
+## 📦 What This Project Provides
 
-## Important warning
+- 🧩 Modular agents and workflows for common cybersecurity tasks
+- 🎭 Scenario-driven automation using LLMs
+- 🖥️ Built-in support for demo servers and agent coordination
+- 🔬 A framework for exploring LLM-assisted threat simulation and detection engineering
 
-> Running LLM-generated source code and commands carries security risks. Use this repository only in isolated or test environments.
+---
 
-## Quick start
+## ⚠️ Important Warning
 
-1. Install dependencies:
+> Running LLM-generated source code and commands carries security risks. **Use this repository only in isolated or test environments.**
 
-```bash
-pip install -r requirements.txt
-```
+---
 
-2. Create a local `.env` from the template:
+## 🚀 Quick Start
 
-```bash
-cp .env_template .env
-```
+1. 📥 **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-3. Add your LLM API credentials and configuration values to `.env`.
+2. 📝 **Create a local `.env`** from the template:
+   ```bash
+   cp .env_template .env
+   ```
 
-4. (Optional) Start the demo servers:
+3. 🔑 **Add your LLM API credentials** and configuration values to `.env`.
 
-```bash
-python run_servers.py
-```
+4. 🖥️ *(Optional)* **Start the demo servers:**
+   ```bash
+   python run_servers.py
+   ```
 
-5. Run the example scenario:
+5. ▶️ **Run the example scenario:**
+   ```bash
+   python run_agents.py HELLO_AGENTS
+   ```
 
-```bash
-python run_agents.py HELLO_AGENTS
-```
+---
 
-## Example output
+## 💬 Example Output
 
 A successful run should show a basic agent interaction, for example:
 
 ```text
 ********************************************************************************
 Starting a new chat....
-
 ********************************************************************************
 task_coordinator_agent (to text_analyst_agent):
-
 Tell me a cyber security joke
-
 --------------------------------------------------------------------------------
 text_analyst_agent (to task_coordinator_agent):
-
 Why was the computer cold? It left its Windows open.
-
 TERMINATE
 ```
 
-## Working with scenarios
+---
+
+## 🎭 Working with Scenarios
 
 All scenario definitions are located in `actions/agent_actions.py`.
+
 Add or update an entry in the scenario dictionary, then execute:
 
 ```bash
 python run_agents.py <scenario-name>
 ```
 
-## Project structure
+---
 
-- `run_agents.py` — scenario execution entrypoint
-- `run_servers.py` — starts the HTTP/FTP demo servers
-- `actions/agent_actions.py` — scenario definitions and workflows
-- `agents/` — agent implementations
-- `tools/` — helper tools used by agents
-- `utils/` — shared utilities and configuration
-- `notebooks/` — demo notebooks and research examples
+## 📁 Project Structure
 
-## Development
+- 🎬 `run_agents.py` — scenario execution entrypoint
+- 🖥️ `run_servers.py` — starts the HTTP/FTP demo servers
+- 🗂️ `actions/agent_actions.py` — scenario definitions and workflows
+- 🤖 `agents/` — agent implementations
+- 🛠️ `tools/` — helper tools used by agents
+- ⚙️ `utils/` — shared utilities and configuration
+- 📓 `notebooks/` — demo notebooks and research examples
 
-### Jupyter notebooks
+---
+
+## 🧑‍💻 Development
+
+### 📓 Jupyter Notebooks
 
 To launch notebooks and expose them on a chosen interface:
 
@@ -96,7 +102,7 @@ To launch notebooks and expose them on a chosen interface:
 ./run_notebooks.sh <network-interface>
 ```
 
-### Static analysis
+### 🧹 Static Analysis
 
 This repository ignores long agent strings, so `flake8` is configured to skip a few style rules:
 
@@ -104,19 +110,4 @@ This repository ignores long agent strings, so `flake8` is configured to skip a 
 flake8 --exclude=.venv --ignore=E501,W503 .
 ```
 
-## Contributing
-
-Contributions are welcome. Please fork the repository, add new agents or scenarios, and submit a pull request.
-
-## License
-
-This project is released under the GNU General Public License v3 (GPL-3).
-
-## Disclaimer
-
-This repository is an early-stage project and may contain unstable or experimental components. Use it with caution and expect possible breaking changes.
-
-## Acknowledgements
-
-Thanks to [INNOVIRIS](https://innoviris.brussels/) and the Brussels region for supporting the research and development activities behind this project.
-
+---
